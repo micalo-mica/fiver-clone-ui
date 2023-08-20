@@ -45,6 +45,8 @@ const GContainer = styled.div`
   @media (max-width: ${({ theme }) => theme.screens.lg1}) {
   }
   @media (max-width: ${({ theme }) => theme.screens.md}) {
+    max-width: ${({ theme }) => theme.sizes.widthLgPhone};
+    grid-template-columns: repeat(2, 1fr);
   }
   @media (max-width: ${({ theme }) => theme.screens.sm3}) {
   }

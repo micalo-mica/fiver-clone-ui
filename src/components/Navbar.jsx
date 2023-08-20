@@ -5,6 +5,7 @@ import { FaTimes } from "react-icons/fa";
 import Pro from "../assets/pro.png";
 import { useGlobalContext } from "../context/HeaderContext";
 import { useState } from "react";
+import { useContext } from "react";
 
 const N = styled.div`
   background-color: ${({ theme }) => theme.colors.hero};
@@ -51,7 +52,11 @@ const NavbarContainer = styled.div`
 `;
 
 const Logo = styled.div``;
-const LogoText = styled.h1``;
+const LogoText = styled.h1`
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+`;
 
 // center
 const Center = styled.div`
@@ -252,11 +257,11 @@ const ToggleContainer = styled.div`
   @media (max-width: ${({ theme }) => theme.screens.lg1}) {
   }
   @media (max-width: ${({ theme }) => theme.screens.md}) {
+    display: flex;
   }
   @media (max-width: ${({ theme }) => theme.screens.sm3}) {
   }
   @media (max-width: ${({ theme }) => theme.screens.sm2}) {
-    display: flex;
   }
   @media (max-width: ${({ theme }) => theme.screens.sm1}) {
   }
@@ -336,10 +341,11 @@ function Navbar() {
                 <Link to="/messages">
                   <Options>Messages</Options>
                 </Link>
-                <Link
-                // onClick={handleLogout}
-                >
+                <Link onClick={handleLogout}>
                   <Options>Logout</Options>
+                </Link>
+                <Link to="/forgotPassword">
+                  <Options>Forgot Password</Options>s
                 </Link>
               </ProfileOptions>
             )}

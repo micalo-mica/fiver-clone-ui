@@ -174,6 +174,7 @@ const Right = styled.div`
   @media (max-width: ${({ theme }) => theme.screens.lg1}) {
   }
   @media (max-width: ${({ theme }) => theme.screens.md}) {
+    display: none;
   }
   @media (max-width: ${({ theme }) => theme.screens.sm3}) {
   }
